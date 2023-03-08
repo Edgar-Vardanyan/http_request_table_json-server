@@ -1,0 +1,123 @@
+<h1 mat-dialog-title>User Info</h1>
+<div mat-dialog-content>
+
+  <form [formGroup]="userForm">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput
+             placeholder="Name"
+             formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput
+             placeholder="Username"
+             formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput
+             placeholder="Email"
+             formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Phone</mat-label>
+      <input matInput
+             placeholder="Phone"
+             formControlName="phone">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Website</mat-label>
+      <input matInput
+             placeholder="Website"
+             formControlName="website">
+    </mat-form-field>
+
+    <div formGroupName="address">
+      <mat-form-field appearance="outline">
+        <mat-label>Street</mat-label>
+        <input matInput
+               placeholder="Street"
+               formControlName="street">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Suite</mat-label>
+        <input matInput
+               placeholder="Suite"
+               formControlName="suite">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput
+               placeholder="City"
+               formControlName="city">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Zipcode</mat-label>
+        <input matInput
+               placeholder="Zipcode"
+               formControlName="zipcode">
+      </mat-form-field>
+
+      <div formGroupName="geo">
+        <mat-form-field appearance="outline">
+          <mat-label>Latitude</mat-label>
+          <input matInput
+                 placeholder="Latitude"
+                 formControlName="lat">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Longitude</mat-label>
+          <input matInput
+                 placeholder="Longitude"
+                 formControlName="lng">
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div formGroupName="company">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Company Name</mat-label>
+        <input matInput
+               placeholder="Company Name"
+               formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Company Catchphrase</mat-label>
+        <input matInput
+               placeholder="Company Catchphrase"
+               formControlName="catchPhrase">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Business</mat-label>
+        <input matInput
+               placeholder="Business"
+               formControlName="bs">
+      </mat-form-field>
+
+    </div>
+
+    <div mat-dialog-actions [align]="'end'">
+
+      <button mat-raised-button color="warn" mat-dialog-close type="button">Close</button>
+      <button [disabled]="userForm.invalid" mat-raised-button color="primary" (click)="createUser()" type="button">{{actionBtn}}</button>
+
+    </div>
+
+  </form>
+
+</div>
+

@@ -1,0 +1,77 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar-single-row {
+  background: #FFFFFF;
+}
+
+.mat-icon {
+  vertical-align: unset !important;
+}
+
+.mat-header-cell {
+  border-bottom-style: unset;
+  width: 90px;
+  text-align: center;
+}
+
+.mat-cell {
+  border-bottom-style: unset;
+}
+
+.mat-cell:first-of-type {
+  padding: 0;
+}
+
+.mat-header-cell:first-of-type {
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 40px 0 40px;
+
+  .section {
+    overflow: auto;
+    height: 80vh;
+
+    .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+    }
+
+
+    table {
+      width: 100%;
+      position: relative;
+
+      ::ng-deep {
+        thead {
+          position: sticky;
+          top: 0;
+        }
+      }
+
+      td {
+        display: inline-block;
+        white-space: nowrap;
+        width: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 25px;
+      }
+
+
+
+      tr {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding: 0 20px 0 20px;
+        align-items: center;
+      }
+
+    }
+  }
+}
